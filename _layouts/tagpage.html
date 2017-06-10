@@ -1,0 +1,74 @@
+---
+layout: default
+---
+<!--
+<div class="post">
+
+<h1 class="post-title">{{ page.tag }}</h1>
+<ul>
+{% for post in site.tags[page.tag] %}
+
+<li>
+{{ post.date | date: "%B %d, %Y"}}: <a href="{{ post.url }}">{{ post.title }}</a>
+
+</li>
+
+{% endfor %}
+</ul>    
+
+</div>
+-->
+
+<!-- Grid Style 5 Start -->
+<div class="cp-news-grid-style-5 m20">
+  <div class="section-title">
+  	<span><i class="fa fa-tags"></i></span>
+    	<h2 style="lowcase">{{ page.tag }}</h2></div>
+      
+      <div> 
+          
+        <!--News Start--> 
+              
+        {% for post in site.tags[page.tag] | limit: 10 %} 
+        
+        <div class="cp-news-list">
+          <ul class="row">
+            <li class="col-md-6 col-sm-6">
+              <div class="cp-thumb"><img src="{{ site.baseurl }}/healthy_mind/images/{% if post.img %}{{ post.img }}{% endif %}" alt=""></div>
+            </li>
+             <li class="col-md-6 col-sm-6">
+              <div class="cp-post-content">
+                <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+                  <ul class="cp-post-tools">
+                    <li><i class="icon-1"></i> {{ post.date | date: "%b %-d, %Y" }} </li>
+                    <li><i class="icon-2"></i>{% if page.author %}{{ page.author }}{% endif %}</li>
+                    <li><i class="icon-4"></i> 57 Comments</li>
+                    <li><a href="#"><i class="icon-9"></i> <i class="icon-9"></i> <i class="icon-9"></i> <i class="icon-9"></i> <i class="icon-10"></i></a></li>
+                  </ul>
+                    <p> {{ post.excerpt | truncate:200 }} </p>
+              </div>
+             </li>
+          </ul>
+        </div>
+        
+        {% endfor %}
+
+
+             
+               <!-- pagination Start -->
+        <div  class="pagination-holder">
+          <nav>
+            <ul class="pagination">
+              <li> <a href="#" aria-label="Previous"> <span aria-hidden="true"><i class="fa fa-angle-left"></i></span> </a> </li>
+              <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li> <a href="#" aria-label="Next"> <span aria-hidden="true"><i class="fa fa-angle-right"></i></span> </a> </li>
+            </ul>
+          </nav>
+        </div>
+              <!-- pagination End --> 
+  </div>
+</div>   
+        
+

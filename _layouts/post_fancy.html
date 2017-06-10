@@ -1,0 +1,50 @@
+---
+layout: default
+---
+
+<div class="cp-single-post"> 
+
+                {% include breadcrumbs.html path=page.path title=page.title %}
+
+    <!-- Post Details -->
+    <div class="cp-post-content">
+      <h1>{{ page.title }}</h1>
+        <ul class="cp-post-tools">
+          <li><i class="icon-1"></i>{{ page.date | date: "%b %-d, %Y" }}</li>
+          <li><i class="icon-2"></i>{% if page.author %}{{ page.author }}{% endif %}</li>
+          <li><i class="icon-3"></i>{{ page.categories[0] }} / {{ page.categories[1] }}</li>
+        </ul>
+                
+                {{ content }}
+     </div>
+              
+    <!-- Post Share and Tags -->
+    <div class="cp-post-share-tags">
+      <div class="row">
+        <div class="col-md-6">
+          <ul class="cp-post-share">
+            <li><span><i class="fa fa-share-alt"></i></span></li>
+            <li><a href="{{ post.url }}"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="{{ post.url }}"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="{{ post.url }}"><i class="fa fa-pinterest-p"></i></a></li>
+            <li><a href="{{ post.url }}"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+          </ul>
+        </div>
+        
+        <div class="col-md-6">
+          <ul class="cp-post-tags">
+            <li><span><i class="fa fa-tags"></i></span></li>
+
+                {% for tag in page.tags %}
+                  <li><a href="{{ site.baseurl }}/tags/{{ tag }}">{{ tag }}</a></li>
+                {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+              
+</div>
+
+<script>$(".breadcrumb li").last().addClass('active');</script>

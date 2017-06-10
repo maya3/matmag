@@ -1,0 +1,14 @@
+Notes on file:
+
+1. Structure:
+- main template - default, this includes head, header, footer, sidebar, content.
+Draft default template saved in jekylltempl/_layouts/default. It differs from the one is going to be used: on sidebar - it includes elements I removed from project version: newsletter, popular posts, video wid, reviews
+- content will inject 3 different views. These are: home page(index in root), post per categories list, single post view (post_fancy with img, post - w/out img).     
+- all posts are in posts/. Categories - fixed
+
+
+2. Tags
+- posts are with tags;
+- index on tags in tags.html root (but not linked to anythere), generates a list of all tags with links to individual tag pages;
+- tags: for each tag folder tags/tag1/index html created with posts per a tag
+

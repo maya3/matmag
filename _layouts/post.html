@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<div class="post">
+
+	<ul class="breadcrumb">
+      <li><a href="{{ base.url }}"><i class="icon-home"></i>Home</a> </li>
+        {% assign crumbs = page.url | split: '/'  %}
+        {% assign crumbstotal = crumbs | size %}
+        {% for crumb in crumbs offset:1 %}
+          {% unless crumb == 'index.html' %}
+            <li><span class="divider">&#187;</span> {{ crumb | remove:'.html' }} </li>
+          {% endunless %}
+        {% endfor %}
+    </ul>
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+  </header>
+
+  <article class="post-content">
+    {{ content }}
+  </article>
+
+</div>

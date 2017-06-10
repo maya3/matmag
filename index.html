@@ -1,0 +1,202 @@
+---
+layout: default
+---
+               
+          <!-- Grid Style 1 Start -->
+          
+<div class="cp-news-grid-style-1">
+  <div class="section-title blue-border">
+    <h2>Featured</h2>
+    <small>Lorem ipsum dolor sit amet, consectetur adipiscing</small> </div>
+        <div class="row">
+            <ul class="grid">
+                <li class="col-md-6 col-sm-6">
+                 {% for post in site.categories.health | limit: 1 %}
+                  <div class="cp-news-post-excerpt">
+                    <!--image in template size quoted 360 x 220 plus in all 6 image/sections-->
+                    <div class="cp-thumb"><img src="{{ site.baseurl }}/health/images/{{ post.img }}" alt=""></div>
+                    <div class="cp-post-content">
+                      <div class="catname"><a class="catname-btn btn-purple waves-effect waves-button" href="{{ site.baseurl }}/health/index.html">Health</a></div>
+                      <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+                      <ul class="cp-post-tools">
+                        <li><i class="icon-1"></i> {{ post.date | date: "%b %-d, %Y" }} </li>
+                        <li><i class="icon-2"></i> {% if page.author %}{{ page.author }}{% endif %} </li>
+                      </ul>
+                      <p>{{ post.excerpt | truncate:30 }}</p>
+                    </div>
+                  </div>
+                 {% endfor %}
+                </li>
+                <li class="col-md-6 col-sm-6">
+                 {% for post in site.categories.beauty | limit: 1 %}
+                  <div class="cp-news-post-excerpt">
+                    <div class="cp-thumb"><img src="{{ site.baseurl }}/beauty/images/{{ post.img }}" alt=""></div>
+                    <div class="cp-post-content">
+                      <div class="catname"><a class="catname-btn btn-pink waves-effect waves-button" href="{{ site.baseurl }}/beauty/index.html">Beauty</a></div>
+                      <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+                      <ul class="cp-post-tools">
+                        <li><i class="icon-1"></i> {{ post.date | date: "%b %-d, %Y" }} </li>
+                        <li><i class="icon-2"></i> {% if page.author %}{{ page.author }}{% endif %} </li>
+                      </ul>
+                      <p>{{ post.excerpt | truncate:30 }}</p>
+                    </div>
+                  </div>
+                 {% endfor %}
+                </li>
+              </ul>
+              <ul class="grid">
+                <li class="col-md-6 col-sm-6">
+                 {% for post in site.categories.nutrition | limit: 1 %}
+                  <div class="cp-news-post-excerpt">
+                    <div class="cp-thumb"><img src="{{ site.baseurl }}/nutrition/images/{{ post.img }}" alt=""></div>
+                    <div class="cp-post-content">
+                      <div class="catname"><a class="catname-btn btn-gray waves-effect waves-button" href="{{ site.baseurl }}/nutrition/index.html">Nutrition</a></div>
+                      <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+                      <ul class="cp-post-tools">
+                        <li><i class="icon-1"></i> {{ post.date | date: "%b %-d, %Y" }} </li>
+                        <li><i class="icon-2"></i> {% if page.author %}{{ page.author }}{% endif %} </li>
+                      </ul>
+                      <p>{{ post.excerpt | truncate:30 }}</p>
+                    </div>
+                  </div>
+                  {% endfor %}
+                </li>
+                <li class="col-md-6 col-sm-6">
+                  {% for post in site.categories.style | limit: 1 %}
+                  <div class="cp-news-post-excerpt">
+                    <div class="cp-thumb"><img src="{{ site.baseurl }}/style/images/{{ post.img }}" alt=""></div>
+                    <div class="cp-post-content">
+                      <div class="catname"><a class="catname-btn btn-green waves-effect waves-button" href="{{ site.baseurl }}/style/index.html">Style</a></div>
+                      <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+                      <ul class="cp-post-tools">
+                        <li><i class="icon-1"></i> {{ post.date | date: "%b %-d, %Y" }} </li>
+                        <li><i class="icon-2"></i> {% if page.author %}{{ page.author }}{% endif %} </li>
+                      </ul>
+                      <p>{{ post.excerpt | truncate:30 }}</p>
+                    </div>
+                  </div>
+                  {% endfor %}
+                </li>
+              </ul>
+              <ul class="grid">
+                <li class="col-md-6 col-sm-6">
+                  {% for post in site.categories.anti-ageing | limit: 1 %}
+                  <div class="cp-news-post-excerpt">
+                    <div class="cp-thumb"><img src="{{ site.baseurl }}/health/anti-ageing/images/{{ post.img }}" alt=""></div>
+                    <div class="cp-post-content">
+                      <div class="catname"><a class="catname-btn btn-orange waves-effect waves-button" href="{{ site.baseurl }}/health/anti-ageing/index.html">Anti-ageing</a></div>
+                      <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+                      <ul class="cp-post-tools">
+                        <li><i class="icon-1"></i> {{ post.date | date: "%b %-d, %Y" }} </li>
+                        <li><i class="icon-2"></i> {% if page.author %}{{ page.author }}{% endif %} </li>
+                      </ul>
+                      <p>{{ post.excerpt | truncate:30 }}</p>
+                    </div>
+                  </div>
+                  {% endfor %}
+                </li>
+                <li class="col-md-6 col-sm-6">
+                  {% for post in site.categories.relationships | limit: 1 %}
+                  <div class="cp-news-post-excerpt">
+                    <div class="cp-thumb"><img src="{{ site.baseurl }}/relationships/images/{{ post.img }}" alt=""></div>
+                    <div class="cp-post-content">
+                      <div class="catname"><a class="catname-btn btn-purple waves-effect waves-button" href="{{ site.baseurl }}/relationships/index.html">Relationships</a></div>
+                      <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+                      <ul class="cp-post-tools">
+                        <li><i class="icon-1"></i> {{ post.date | date: "%b %-d, %Y" }} </li>
+                        <li><i class="icon-2"></i> {% if page.author %}{{ page.author }}{% endif %} </li>
+                      </ul>
+                      <p>{{ post.excerpt | truncate:30 }}</p>
+                    </div>
+                  </div>
+                  {% endfor %}
+                </li>
+            </ul>
+        </div>
+</div>
+          <!-- Grid Style 1 End --> 
+
+          <!-- Grid Style 5 Start -->
+<div class="cp-news-grid-style-5 m20">
+  <div class="section-title pink-border">
+    <h2>Latest</h2>
+        <small>Latest news from the site</small> </div>
+  <div> 
+          
+          <!--News Start--> 
+  
+            {% for post in site.posts | limit:5 %}
+  
+<div class="cp-news-list">
+    <ul class="row">
+          <li class="col-md-6 col-sm-6">
+          
+                    <!--image in template size quoted 360 x 250 plus in all 5 image/sections-->
+            <div class="cp-thumb"><img src="{{ site.baseurl }}/health/images/{{ post.img }}" alt=""></div>
+          </li>
+          <li class="col-md-6 col-sm-6">
+            <div class="cp-post-content">
+              <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+                <ul class="cp-post-tools">
+                  <li><i class="icon-1"></i> {{ post.date | date: "%b %-d, %Y" }} </li>
+                  <li><i class="icon-2"></i> {% if page.author %}{{ page.author }}{% endif %} </li>
+                </ul>
+                <p>{{ post.excerpt | truncate:200 }}</p>
+             </div>
+          </li>
+        </ul>    
+</div>      
+            
+            {% endfor %}
+             
+                  
+          <!-- Grid Style 3 start -->
+          <div class="cp-news-grid-style-3 m20">
+            <div class="section-title purple-border">
+              <h2>Recommended</h2>
+              <small>Lorem ipsum dolor sit amet, consectetur adipiscing</small> </div>
+            <div class="grid-holder">
+              <div class="row">
+                <ul class="cp-load-newsgrid">
+                  <li class="col-md-4 col-sm-4 cp-news-post">
+                    <!--image in template size quoted 210 x 155 plus in all 3 image/sections-->
+                    <div class="cp-thumb"><img src="images/ls1.jpg" alt=""></div>
+                    <h3><a href="single-post.html">Proin id diam in nulla sagittis
+                      tempor nec eu ipsum.</a></h3>
+                  </li>
+                  <li class="col-md-4 col-sm-4 cp-news-post">
+                    <div class="cp-thumb"><img src="images/ls2.jpg" alt=""></div>
+                    <h3><a href="single-post.html">Proin id diam in nulla sagittis
+                      tempor nec eu ipsum.</a></h3>
+                  </li>
+                  <li class="col-md-4 col-sm-4 cp-news-post">
+                    <div class="cp-thumb"><img src="images/ls3.jpg" alt=""></div>
+                    <h3><a href="single-post.html">Proin id diam in nulla sagittis
+                      tempor nec eu ipsum.</a></h3>
+                  </li>
+                </ul>
+                <div class="load-more loadmore-holder"> <a href="#" class="loadmore waves-effect waves-button">Load More <i class="icon-8"></i></a> </div>
+              </div>
+            </div>
+          </div>
+          <!-- Grid Style 3 End --> 
+
+
+        
+              
+              <!-- pagination Start -->
+              <div  class="pagination-holder">
+                <nav>
+                  <ul class="pagination">
+                    <li> <a href="#" aria-label="Previous"> <span aria-hidden="true"><i class="fa fa-angle-left"></i></span> </a> </li>
+                    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li> <a href="#" aria-label="Next"> <span aria-hidden="true"><i class="fa fa-angle-right"></i></span> </a> </li>
+                  </ul>
+                </nav>
+              </div>
+              <!-- pagination End --> 
+            </div>
+          </div>
+          
